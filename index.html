@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSpector</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1>Welcome to NetSpector</h1>
+        <p>Loading...</p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+        <header>
+            <h2>NetSpector Dashboard</h2>
+            <button id="scan-btn">Start Scan</button>
+            <button id="speed-test-btn">Run Speed Test</button>
+        </header>
+
+        <!-- Password Protection -->
+        <div id="password-container">
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button id="password-btn">Submit</button>
+        </div>
+
+        <!-- Progress Container -->
+        <div id="progress-container" class="hidden">
+            <div id="progress" class="progress-bar"></div>
+            <p id="progress-text">Scanning... 0%</p>
+        </div>
+
+        <!-- Scan Results -->
+        <table id="results-table" class="hidden">
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>Device</th>
+                    <th>MAC Address</th>
+                    <th>Port</th>
+                    <th>Type</th>
+                    <th>OS</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+        </table>
+
+        <!-- Charts -->
+        <section id="charts-section" class="hidden">
+            <canvas id="device-chart"></canvas>
+        </section>
+
+        <!-- Speed Test Results -->
+        <div id="speed-test-results" class="hidden">
+            <p>Download Speed: <span id="download-speed">Calculating...</span> Mbps</p>
+            <p>Upload Speed: <span id="upload-speed">Calculating...</span> Mbps</p>
+            <p>Ping: <span id="ping">Calculating...</span> ms</p>
+        </div>
+
+        <!-- Toast Container -->
+        <div id="toast-container"></div>
+
+        <!-- Export Buttons -->
+        <button id="export-csv">Export to CSV</button>
+        <button id="export-pdf">Export to PDF</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

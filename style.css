@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button.disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+#progress-container {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+#progress {
+    width: 0;
+    height: 100%;
+    background-color: #28a745;
+}
+
+#results-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#results-table th, #results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#results-table th {
+    background-color: #f2f2f2;
+}
+
+#charts-section {
+    margin-top: 20px;
+}
+
+.toast {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.toast.hidden {
+    opacity: 0;
+}
+
+#password-container {
+    margin: 20px;
+}
+
+#password-input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#speed-test-results {
+    margin-top: 20px;
+}
